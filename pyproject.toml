@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "the-second-brain"
+version = "1.0.0"
+description = "本地知识库系统—第二大脑"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain-core>=0.3.0",
+    "langchain-community>=0.3.0",
+    "langchain-text-splitters>=0.3.0",
+    "unstructured>=0.16.0",
+    "langchain-openai>=0.2.0",
+    "langchain-chroma>=0.1.0",
+    "fastmcp>=2.0.0",
+    "pyyaml>=6.0",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+]
+
+[project.scripts]
+second-brain = "http_server:main"
+
+[tool.setuptools]
+py-modules = ["http_server", "main"]

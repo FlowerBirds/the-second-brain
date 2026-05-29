@@ -1,0 +1,23 @@
+# LangChain
+langchain-core>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# Document loaders (langchain-community unstructured loader 底层依赖)
+unstructured>=0.16.0
+
+# OpenAI
+langchain-openai>=0.2.0
+
+# Vector store
+langchain-chroma>=0.1.0
+
+# MCP
+fastmcp>=2.0.0
+
+# Configuration
+pyyaml>=6.0
+
+# Web server
+fastapi>=0.115.0
+uvicorn>=0.30.0

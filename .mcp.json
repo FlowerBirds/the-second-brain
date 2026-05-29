@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "local-second-brain": {
+      "command": "python",
+      "args": ["main.py", "--mode", "mcp-stdio"],
+      "cwd": "D:\\07_code\\python\\local-second-brain"
+    }
+  }
+}

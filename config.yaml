@@ -1,0 +1,39 @@
+# 本地知识库系统—第二大脑 配置文件
+
+embedding:
+  model: "text-embedding-3-small"
+  dimensions: 1536
+  batch_size: 100
+  api_base: "https://xiaohumini.site/v1"
+  api_key: "sk-Z9rxrX78FbTGAZZZUCdWoP3YZuc6lOPMOxntmWyfeJWJb67R"  # 可填入API密钥，或通过环境变量 OPENAI_API_KEY / EMBEDDING_API_KEY
+
+chroma:
+  persist_directory: "data/chroma_db"
+  collection_name: "knowledge_base"
+  distance_metric: "cosine"
+
+document:
+  chunk_size: 500
+  chunk_overlap: 50
+  supported_formats:
+    - ".md"
+    - ".txt"
+    - ".html"
+
+llm:
+  model: "gpt-5.5"
+  temperature: 0.7
+  max_tokens: 2000
+  api_base: "https://unity2.ai/v1"
+  api_key: "sk-d338885103860b74199c1334c1b428928eafc36736943aa9aab1b5b6643ecc05"  # 可填入API密钥，或通过环境变量 OPENAI_API_KEY
+
+mcp:
+  host: "127.0.0.1"
+  port: 8765
+  auth_token: null
+
+rag:
+  top_k: 5
+  min_similarity: 0.6
+  use_mmr: false
+  mmr_lambda: 0.5
